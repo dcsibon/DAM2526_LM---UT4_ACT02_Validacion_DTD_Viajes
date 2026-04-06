@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE viajes_turisticos [
+    <!ELEMENT viajes_turisticos (viaje)>
+    <!ELEMENT viaje (clientes, fecha_inicio, fecha_fin, origen, posibles_destinos, precio)>
+
+    <!ELEMENT clientes (cliente+)>
+    <!ELEMENT cliente (nombre, apellidos)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT apellidos (#PCDATA)>
+
+    <!ELEMENT fecha_inicio (#PCDATA)>
+    <!ELEMENT fecha_fin (#PCDATA)>
+    <!ELEMENT origen (#PCDATA)>
+
+    <!ELEMENT posibles_destinos (destino+)>
+    <!ELEMENT destino (ciudad, hotel, noches)>
+    <!ELEMENT ciudad (#PCDATA)>
+    <!ELEMENT hotel (#PCDATA)>
+    <!ELEMENT noches (#PCDATA)>
+
+    <!ELEMENT precio (#PCDATA)>
+]>
+<viajes_turisticos>
+    <viaje>
+        <clientes>
+            <cliente>
+                <nombre>Lucía</nombre>
+                <apellidos>Pérez Gómez</apellidos>
+            </cliente>
+            <cliente>
+                <nombre>Mario</nombre>
+                <apellidos>Ruiz Torres</apellidos>
+            </cliente>
+        </clientes>
+        <fecha_inicio>2026-06-15</fecha_inicio>
+        <fecha_fin>2026-06-22</fecha_fin>
+        <origen>Sevilla</origen>
+        <posibles_destinos>
+            <destino>
+                <ciudad>Roma</ciudad>
+                <hotel>Hotel Coliseum</hotel>
+                <noches>3</noches>
+            </destino>
+            <destino>
+                <ciudad>Florencia</ciudad>
+                <hotel>Hotel Duomo</hotel>
+                <noches>2</noches>
+            </destino>
+            <destino>
+                <ciudad>Venecia</ciudad>
+                <hotel>Hotel Canal</hotel>
+                <noches>2</noches>
+            </destino>
+        </posibles_destinos>
+        <precio>1250</precio>
+    </viaje>
+</viajes_turisticos>
